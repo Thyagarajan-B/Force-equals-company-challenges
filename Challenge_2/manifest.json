@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "LinkedIn Profile Enhancer",
+  "version": "1.0",
+  "description": "Injects a widget into LinkedIn profiles showing match score and status.",
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "*://www.linkedin.com/in/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "css": [
+        "style.css"
+      ]
+    }
+  ],
+  "action": {
+    "default_title": "LinkedIn Enhancer"
+  }
+}
